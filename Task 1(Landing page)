@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Your Landing Page</title>
+</head>
+<body>
+
+    <header>
+        <h1>Your Product or Service</h1>
+        <p>A brief description of what you offer</p>
+    </header>
+
+    <section class="main-content">
+        <h2>Welcome to our Website!</h2>
+        <p>This is a brief introduction to your product or service. Highlight key features or benefits.</p>
+        <a href="#contact" class="cta-button" onclick="smoothScroll('contact')">Get Started</a>
+    </section>
+
+    <section id="contact" class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="submit_form.php" method="post" onsubmit="submitForm(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+CSS:
+body {
+    font-family: cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('gd.jpg'); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for better readability */
+    padding: 20px;
+    text-align: center;
+}
+
+.main-content {
+    text-align: center;
+    padding: 50px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.contact-form {
+    background: rgba(47, 45, 45, 0.8); /* Semi-transparent white background for better readability */
+    padding: 50px;
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for better readability */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
